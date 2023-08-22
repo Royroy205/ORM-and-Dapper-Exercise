@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace ORM_Dapper
 {
     public class ProductRepo 
     {
-        private readonly IDbConnection connection;
+        private readonly IDbConnection _connection;
 
-        public ProductRepo(IDbConnection _connection) 
+        public ProductRepo(IDbConnection connection) 
         { 
            _connection = connection;
         }
