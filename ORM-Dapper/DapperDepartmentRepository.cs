@@ -22,9 +22,9 @@ namespace ORM_Dapper
             return _conn.Query<Department>("SELECT * FROM departments");
         }
 
-        public void InsertDepartments(string name)
+        public void InsertDepartments(string newDepartmentName)
         {
-            _conn.Execute("INSERT INTO departments (NAME) VALUES (@name)", new {name = name });
+            _conn.Execute("INSERT INTO Departments (NAME) VALUES (@departmentName);", new {departmentName = newDepartmentName });
         }
 
     }
